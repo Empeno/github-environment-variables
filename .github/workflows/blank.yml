@@ -29,7 +29,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          echo 'Environment is: "${{ env.ENVIRONMENT_NAME }}"'
+          echo ${{ env.ENVIRONMENT_NAME }}
           echo "Dev secret is Burg: Is it working: ${{ secrets.BENT == 'Burg' }}"
           echo "Test secret is Faber: Is it working: ${{ secrets.BENT == 'Faber' }}"
   
@@ -44,7 +44,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          echo 'Environment is: "${{ env.ENVIRONMENT_NAME }}"'
+          echo ${{ env.ENVIRONMENT_NAME }}
           echo "Dev secret is Burg: Is it working: ${{ secrets.BENT == 'Burg' }}"
           echo "Test secret is Faber: Is it working: ${{ secrets.BENT == 'Faber' }}"
   
@@ -59,6 +59,6 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          echo "Environment is: ${{ env.ENVIRONMENT_NAME }}"
+          echo ${{ env.ENVIRONMENT_NAME }}
           echo "Dev secret is Burg: Is it working: ${{ secrets.BENT == 'Burg' }}"
           echo "Test secret is Faber: Is it working: ${{ secrets.BENT == 'Faber' }}"
