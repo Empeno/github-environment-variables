@@ -20,7 +20,7 @@ env:
 jobs:
   chosen:
     runs-on: ubuntu-latest
-    environment: echo ${{ env.ENVIRONMENT_NAME }}
+    environment: dev
     steps:
       - uses: actions/checkout@v2
 
