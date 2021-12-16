@@ -3,7 +3,7 @@ name: CI
 on:
   workflow_dispatch:
     inputs:
-      environment:
+      chosen_environment:
         type: choice
         description: Choose an environment
         required: false
@@ -15,7 +15,7 @@ on:
         - prod
 
 env:
-  ENVIRONMENT_NAME: ${{ github.event.inputs.environment }}
+  ENVIRONMENT_NAME: ${{ github.event.inputs.chosen_environment }}
 
 jobs:
   chosen:
