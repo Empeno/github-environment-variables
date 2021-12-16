@@ -21,11 +21,7 @@ jobs:
   chosen:
     runs-on: ubuntu-latest
 
-    if: ${{ env.ENVIRONMENT_NAME == 'dev' }}
-      environment: dev
-    
-    if: ${{ env.ENVIRONMENT_NAME == 'test' }}
-      environment: test
+    environment: dev
 
 
     steps:
