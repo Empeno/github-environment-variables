@@ -20,7 +20,14 @@ env:
 jobs:
   chosen:
     runs-on: ubuntu-latest
-    environment: dev
+
+    if: ${{ env.ENVIRONMENT_NAME == 'dev' }}
+      environment: dev
+    
+    if: ${{ env.ENVIRONMENT_NAME == 'test' }}
+      environment: test
+
+
     steps:
       - uses: actions/checkout@v2
 
