@@ -34,4 +34,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project. 
-          echo "Is it working: ${{ secrets.BENT == 'Burg' }}"
+          echo "Dev secret is Burg: Is it working: ${{ secrets.BENT == 'Burg' }}"
+          echo "Test secret is Faber: Is it working: ${{ secrets.BENT == 'Faber' }}"
